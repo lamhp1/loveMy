@@ -5,7 +5,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-    <title>jQuery+Html5实现唯美表白动画代码</title>
+    <title>Tặng My</title>
 
     <link type="text/css" rel="stylesheet" href="renxi/default.css">
 
@@ -40,12 +40,17 @@
 
 <body>
 
-    <audio autoplay="autopaly">
-
-        <source src="./renxi/y2mate.com - Trước Khi Em Tồn Tại Piano Version  Thắng  Việt Anh Cover MV Lyric.mp3"
-            type="audio/mpeg" />
-
+    <audio autoplay id="video">
+        <source src="./renxi/y2mate.com - Trước Khi Em Tồn Tại Piano Version  Thắng  Việt Anh Cover MV Lyric.mp3">
     </audio>
+    <script>
+        document.addEventListener('click', musicPlay);
+        function musicPlay() {
+            document.getElementById('video').play();
+            document.removeEventListener('click', musicPlay);
+        }
+    </script>
+
 
     <div id="main">
 
@@ -119,6 +124,12 @@
 
 
     <script>
+        /* var audio = document.getElementById('myaudio')
+        var cv = document.getElementById('canvas')
+
+        cv.onclick = function () {
+            audio.play()
+        } */
 
     </script>
 
@@ -380,15 +391,15 @@
             var textAnimate = eval(Jscex.compile("async", function () {
 
                 /* var together = new Date();
-
+ 
                 together.setFullYear(2010, 1, 15); 			//时间年月日
-
+ 
                 together.setHours(16);						//小时	
-
+ 
                 together.setMinutes(53);					//分钟
-
+ 
                 together.setSeconds(0);					//秒前一位
-
+ 
                 together.setMilliseconds(2);				//秒第二位 */
 
 
